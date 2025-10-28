@@ -1,0 +1,72 @@
+[
+  {
+    "id": "claim_1",
+    "medicalServiceCode": "medical_service_1",
+    "bookingDate": "2025-05-15T10:33:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_1"
+  },
+  {
+    "id": "claim_2",
+    "medicalServiceCode": "medical_service_1",
+    "bookingDate": "2025-05-15T11:30:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_2"
+  },
+  {
+    "id": "claim_3",
+    "medicalServiceCode": "medical_service_1",
+    "bookingDate": "2025-05-15T00:00:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_3"
+  },
+  {
+    "id": "claim_4",
+    "medicalServiceCode": "medical_service_1",
+    "bookingDate": "2025-05-15T10:30:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_4"
+  },
+  {
+    "id": "claim_5",
+    "medicalServiceCode": "medical_service_2",
+    "bookingDate": "2025-05-15T10:25:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_5"
+  },
+  {
+    "id": "claim_6",
+    "medicalServiceCode": "medical_service_2",
+    "bookingDate": "2025-05-15T10:25:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_6"
+  },
+  {
+    "id": "claim_7",
+    "medicalServiceCode": "medical_service_1",
+    "bookingDate": "2025-05-15T10:30:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_7"
+  },
+  {
+    "id": "claim_8",
+    "medicalServiceCode": "medical_service_2",
+    "bookingDate": "2025-05-15T00:00:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_7"
+  },
+  {
+    "id": "claim_9",
+    "medicalServiceCode": "medical_service_2",
+    "bookingDate": "2025-05-15T10:31:00.000Z",
+    "insurance": "AON",
+    "patient": "patient_8"
+  },
+  {
+    "id": "claim_10",
+    "medicalServiceCode": "medical_service_2",
+    "bookingDate": "2025-05-15T00:00:00.000Z",
+    "insurance": "FASCHIM",
+    "patient": "patient_8"
+  }
+]
