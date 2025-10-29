@@ -12,7 +12,11 @@ export class MatchService {
     testMap.map((pair) => [pair.bookingTestId, pair.claimTestId]),
   );
 
-  matchLists(bookings: Booking[], claims: Claim[]) {
+  matchLists(bookings: Booking[], claims: Claim[]): Match[] {
+    if (!bookings.length || !claims.length) {
+      return [];
+    }
+
     const groupedBookingsByPatient: Groped<Booking>[] =
       this.#groupAndSort(bookings);
 
