@@ -1,0 +1,42 @@
+[
+  {
+    "claim": "claim_2",
+    "booking": "booking_2",
+    "mismatch": []
+  },
+  {
+    "claim": "claim_3",
+    "booking": "booking_3",
+    "mismatch": ["time"]
+  },
+  {
+    "claim": "claim_4",
+    "booking": "booking_4",
+    "mismatch": []
+  },
+  {
+    "claim": "claim_5",
+    "booking": "booking_5",
+    "mismatch": ["test"]
+  },
+  {
+    "claim": "claim_6",
+    "booking": "booking_6",
+    "mismatch": ["test", "time"]
+  },
+  {
+    "claim": "claim_8",
+    "booking": "booking_7",
+    "mismatch": ["test", "time"]
+  },
+  {
+    "claim": "claim_7",
+    "booking": "booking_8",
+    "mismatch": ["time"]
+  },
+  {
+    "claim": "claim_10",
+    "booking": "booking_9",
+    "mismatch": ["test", "time"]
+  }
+]

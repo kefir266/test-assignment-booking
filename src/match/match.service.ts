@@ -2,12 +2,12 @@ import { Injectable } from '@nestjs/common';
 import testMap from './test-map.json';
 
 type Groped<T> = [string, T[]];
-type Match = { claim: string; booking: string; mismatch: string[] };
 const BOOKING_DATE = 'reservationDate';
 const CLAIM_DATE = 'bookingDate';
 
 @Injectable()
 export class MatchService {
+  // map of test between booking and claim
   #testMap: Map<string, string> = new Map(
     testMap.map((pair) => [pair.bookingTestId, pair.claimTestId]),
   );
@@ -51,7 +51,10 @@ export class MatchService {
       } else {
         bookingsInd++;
       }
-    } while (bookingsInd < bookings.length && claimsInd < claims.length);
+    } while (
+      bookingsInd < groupedBookingsByPatient.length &&
+      claimsInd < groupedClaimsByPatient.length
+    );
 
     return matchesWithMismatchedFields;
   }
@@ -122,6 +125,7 @@ export class MatchService {
    */
   #getMismatch(booking: Booking, claim: Claim): string[] {
     const mismatch: string[] = [];
+    // get maped test
     const claimTestId = this.#testMap.get(booking.test);
     if (!claimTestId || claimTestId !== claim.medicalServiceCode) {
       mismatch.push('test');

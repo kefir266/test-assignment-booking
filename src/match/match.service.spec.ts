@@ -1,6 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { MatchService } from './match.service';
 import requestBody from '../mocks/request-body.json';
+import mockedBookings from '../mocks/bookings.json';
+import mockedClaims from '../mocks/claims.json';
+import mockedResponse from '../mocks/mocked-response-of-matches.json';
 
 describe('MatchService', () => {
   let service: MatchService;
@@ -17,7 +20,7 @@ describe('MatchService', () => {
     expect(service).toBeDefined();
   });
 
-  it('matchLists() should return specific matches', () => {
+  it('matchLists() should return specific matches #1', () => {
     const matches = service.matchLists(
       requestBody.bookings as Booking[],
       requestBody.claims as Claim[],
@@ -32,5 +35,15 @@ describe('MatchService', () => {
         mismatch: expect.arrayContaining(['time', 'test']),
       }),
     );
+  });
+
+  it('matchLists() should return specific matches #2', () => {
+    const matches = service.matchLists(
+      mockedBookings as Booking[],
+      mockedClaims as Claim[],
+    );
+
+    expect(matches).toHaveLength(8);
+    expect(matches).toEqual(expect.arrayContaining(mockedResponse as Match[]));
   });
 });
