@@ -20,6 +20,11 @@ describe('MatchService', () => {
     expect(service).toBeDefined();
   });
 
+  it('should return empty array if one of the lists is empty', () => {
+    const mathces = service.matchLists(requestBody.bookings as Booking[], []);
+    expect(mathces).toEqual([]);
+  });
+
   it('matchLists() should return specific matches #1', () => {
     const matches = service.matchLists(
       requestBody.bookings as Booking[],

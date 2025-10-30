@@ -17,4 +17,13 @@ describe('MatchController', () => {
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
+
+  it('/match (POST)', () => {
+    const result = controller.match({
+      bookings: [],
+      claims: [],
+    });
+
+    expect(result).toEqual([]);
+  });
 });
