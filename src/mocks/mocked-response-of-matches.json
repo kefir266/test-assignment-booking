@@ -1,42 +1,18 @@
 [
+  { "booking": "booking_2", "claim": "claim_2", "mismatch": [] },
+  { "booking": "booking_3", "claim": "claim_3", "mismatch": ["time"] },
+  { "booking": "booking_4", "claim": "claim_4", "mismatch": ["insurance"] },
+  { "booking": "booking_5", "claim": "claim_5", "mismatch": ["test"] },
   {
-    "claim": "claim_2",
-    "booking": "booking_2",
-    "mismatch": []
-  },
-  {
-    "claim": "claim_3",
-    "booking": "booking_3",
-    "mismatch": ["time"]
-  },
-  {
-    "claim": "claim_4",
-    "booking": "booking_4",
-    "mismatch": []
-  },
-  {
-    "claim": "claim_5",
-    "booking": "booking_5",
-    "mismatch": ["test"]
-  },
-  {
-    "claim": "claim_6",
     "booking": "booking_6",
-    "mismatch": ["test", "time"]
+    "claim": "claim_6",
+    "mismatch": ["test", "time", "insurance"]
   },
+  { "booking": "booking_7", "claim": "claim_8", "mismatch": ["test", "time"] },
   {
-    "claim": "claim_8",
-    "booking": "booking_7",
-    "mismatch": ["test", "time"]
-  },
-  {
-    "claim": "claim_7",
     "booking": "booking_8",
-    "mismatch": ["time"]
+    "claim": "claim_7",
+    "mismatch": ["time", "insurance"]
   },
-  {
-    "claim": "claim_10",
-    "booking": "booking_9",
-    "mismatch": ["test", "time"]
-  }
+  { "booking": "booking_9", "claim": "claim_10", "mismatch": ["test", "time"] }
 ]

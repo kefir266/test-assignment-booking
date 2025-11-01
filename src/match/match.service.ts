@@ -135,6 +135,10 @@ export class MatchService {
       mismatch.push('time');
     }
 
+    if (booking.insurance !== claim.insurance) {
+      mismatch.push('insurance');
+    }
+
     return mismatch;
   }
 
