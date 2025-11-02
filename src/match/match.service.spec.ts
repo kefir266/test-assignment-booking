@@ -4,6 +4,7 @@ import requestBody from '../mocks/request-body.json';
 import mockedBookings from '../mocks/bookings.json';
 import mockedClaims from '../mocks/claims.json';
 import mockedResponse from '../mocks/mocked-response-of-matches.json';
+import { multiplyByExistingData } from '../utils/multiply';
 
 describe('MatchService', () => {
   let service: MatchService;
@@ -50,5 +51,16 @@ describe('MatchService', () => {
 
     expect(matches).toHaveLength(8);
     expect(matches).toEqual(expect.arrayContaining(mockedResponse as Match[]));
+
+    const multiTimes = 100000;
+    const { bookings: multiBookings, claims: multiClaims } =
+      multiplyByExistingData(mockedBookings, mockedClaims, multiTimes);
+
+    const startTime = performance.now();
+    const multiMathces = service.matchLists(multiBookings, multiClaims);
+    const endTime = performance.now();
+
+    expect(multiMathces).toHaveLength(matches.length * multiTimes);
+    expect(endTime - startTime).toBeLessThan(5000);
   });
 });

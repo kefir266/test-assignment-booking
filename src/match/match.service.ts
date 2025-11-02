@@ -42,8 +42,11 @@ export class MatchService {
         const sortedBookings = this.#sortDocuments(bookings, BOOKING_DATE);
         const sortedClaims = this.#sortDocuments(claims, CLAIM_DATE);
 
-        const mismatches = this.#matchDocuments(sortedBookings, sortedClaims);
-        matchesWithMismatchedFields.push(...mismatches);
+        const matchesWithMismatches = this.#matchDocuments(
+          sortedBookings,
+          sortedClaims,
+        );
+        matchesWithMismatchedFields.push(...matchesWithMismatches);
         bookingsInd++;
         claimsInd++;
       } else if (bookingPatient > claimPatient) {

@@ -1,0 +1,1 @@
+type BookingClaim = Booking | Claim;
